@@ -1,0 +1,12 @@
+Source: package_name
+Maintainer: James Webb <example@example.com>
+Build-Depends: debhelper, dh-python, python3-all, python3-setuptools
+Section: net
+Priority: optional
+Standards-Version: 4.5.0
+X-Python3-Version: >= 3.7
+
+Package: package_name
+Architecture: all
+Description: Cool Python3 package.
+Depends: ${python3:Depends}, python3.7

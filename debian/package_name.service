@@ -1,0 +1,11 @@
+[Unit]
+Description=Cool Python3 package
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/bin/python3.7 /usr/lib/python3/dist-packages/package_name/main.py
+Environment="INVOCATOR=systemd"
+
+[Install]
+WantedBy=multi-user.target

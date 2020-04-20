@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# package_name installer script
+DIR="/etc/package_name"
+if [ ! -d "$DIR" ]; then
+    mkdir $DIR
+fi
+
+FILE="/etc/package_name/something.conf"
+if [ ! -f "$FILE" ]; then
+    echo "# package_name config file" > $FILE
+    echo "# Add directives here!" >> $FILE
+    echo >> $FILE
+fi
+
