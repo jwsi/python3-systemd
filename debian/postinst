@@ -13,3 +13,6 @@ if [ ! -f "$FILE" ]; then
     echo >> $FILE
 fi
 
+# Remove any masks (if there are any) and restart the service
+systemctl unmask uh-vpn-server.service
+systemctl restart uh-vpn-server

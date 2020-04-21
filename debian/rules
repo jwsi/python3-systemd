@@ -4,10 +4,3 @@ export PYBUILD_NAME = package_name
 
 %:
 	dh $@ --with python3,systemd --buildsystem=pybuild
-
-# Inspiration from https://askubuntu.com/questions/746094/how-to-package-a-systemd-service
-
-override_dh_installinit:
-	dh_systemd_enable -ppackage_name --name=package_name package_name.service
-	dh_installinit -ppackage_name --noscripts
-	dh_systemd_start -ppackage_name

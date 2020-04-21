@@ -2,7 +2,7 @@ import logging
 import os
 import sys
 
-if os.environ.get('INVOCATOR') == "systemd":
+if os.environ.get('INVOCATOR') != "systemd":
     print('Cannot invoke daemon from command line! Use systemd controls.')
     exit(1)
 
